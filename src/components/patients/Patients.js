@@ -1,7 +1,7 @@
 import { useEffect, useState, useRef } from "react";
 import { Alert } from "rsuite";
 import PatientListComponent from "./PatientList";
-import SearchComponent from "./search";
+import SearchComponent from "./Search";
 const axios = require("axios");
 export default function PatientsComponent({}) {
   const [patients, setPatients] = useState([]);
