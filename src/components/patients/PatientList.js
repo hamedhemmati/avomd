@@ -34,6 +34,7 @@ export default function PatientListComponent({ patients, loadFunc, hasMore }) {
             className="row-data"
             onClick={showMore(patient.id)}
             key={patient.id}
+            style={selectedPatient.id === patient.id ? styles.activeRow : null}
           >
             <span className="row-data-column">{patient.id}</span>
             <span className="row-data-column">
@@ -65,3 +66,10 @@ export default function PatientListComponent({ patients, loadFunc, hasMore }) {
     </div>
   );
 }
+const styles = {
+  activeRow: {
+    borderWidth: 1,
+    borderStyle: "solid",
+    borderColor: "rgb(48, 181, 104, 1)"
+  }
+};
