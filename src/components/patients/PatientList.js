@@ -34,7 +34,13 @@ export default function PatientListComponent({ patients, loadFunc, hasMore }) {
             className="row-data"
             onClick={showMore(patient.id)}
             key={patient.id}
-            style={selectedPatient.id === patient.id ? styles.activeRow : null}
+            style={
+              selectedPatient
+                ? selectedPatient.id === patient.id
+                  ? styles.activeRow
+                  : null
+                : null
+            }
           >
             <span className="row-data-column">{patient.id}</span>
             <span className="row-data-column">
